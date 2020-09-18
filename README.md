@@ -23,5 +23,8 @@
             service jenkins status;
 ***Class#4***
     ***Manejo Básico de Usuarios***
-        Manage Jenkins, permite acceso a la configuración de los usuarios.
+        Manage Jenkins: Permite acceso a la configuración de los usuarios.
+***Class#5***
+    ***¿Qué es un Job?***
+        Build Executor Status: Permite el acceso para configurar jobs.
         
