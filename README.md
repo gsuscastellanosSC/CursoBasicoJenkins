@@ -21,4 +21,7 @@
             sudo apt update && sudo apt upgrade -y;
             sudo apt-get install jenkins -y;
             service jenkins status;
+***Class#4***
+    ***Manejo Básico de Usuarios***
+        Manage Jenkins, permite acceso a la configuración de los usuarios.
         
