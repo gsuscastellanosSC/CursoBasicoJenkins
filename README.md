@@ -79,5 +79,5 @@
         [Download now and install after restart]: Se recomienda esta opción ya que jenkins termina de ejecutar los jobs pendientes y posteriormente jenkins realiza la instalación.
 ***Clase#9***
     ***Cadenas de Jobs***
-        Install Plugin Parameterized Trigger plugin.
+
 
