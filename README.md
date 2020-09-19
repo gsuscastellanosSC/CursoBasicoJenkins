@@ -67,9 +67,11 @@
                 [Inspect build log for published Gradle build scans]: N/E
                 [With Ant]: N/E
             [Build]: Ejecución de shell.
-
-
-
+***Clase#7***
+    ***¿Cómo Jenkins interactúa con su máquina local?***
+        Instalar los programas que vamos a usuar en el jenkins.
+            sudo apt install nodejs;
+        Se debe tratar de mantener todo portable.
 
 
             
