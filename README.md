@@ -81,3 +81,43 @@
     ***Cadenas de Jobs***
         Install Plugin Parameterized Trigger plugin.
 
+        Primero instalamos el plugin Parameterized Trigger, igual cómo instalamos anteriormente y reiniciamos.
+
+        Luego vamos a crear 2 jobs nuevos:
+            watchers: En este job, vamos a configure y vamos a “Build after other projects are built” y escribimos y escribimos hello-platzi, sí hello-platzi es successful, quiero que se ejecute watchers.
+            Y en la parte de executed shell, escribimos : echo “Running after hello-platzi success” y guardamos.
+            parameterized: 
+                Acepta parámetros cuando lo llamo. Marcamos la opción “ This project is parameterized” y en el name escribimos ROOT_ID.
+                    Y en el execute shell: 
+                echo “calle with $ROOT_ID” y guardamos.
+
+            Y en hello-platzi, en Downstream project, y estos se añaden cuando jenkins se da cuenta que su job tiene una dependencia con otro.
+            Vamos al configure de hello-platzi y en el execute shell escribimos:
+                echo “Hello Platzi from $NAME”
+            Y añadir un build step que se llama : 
+                “Trigger/call build on other projects”, y en projects to build escribimos parameterized y le damos en añadir parámetros, luego parámetros predefinidos y escribimos:
+                ROOT_ID=$BUILD_NUMBER
+                BUILD_NUMBER es una variable de entorno, que es el valor de esta ejecución y guardamos.
+
+            Le damos en “build with parameters” y entramos al console output de parameterized y vemos que la ejecución número tal, fue la que ejecutó a parameterized.
+            Corre hello-platzi, él llama declarativamente a parameterized e indirectamente a watchers.
+
+            Corre los test para esta versión, cuando acabes, mandame esta versión a producción le pasó el id del commit, y se lo pasó a mí job que hace deployment y cuando lo resuelvas me lo despliegas.
+            El sabe la cadena de ejecuciones que tuvo, y cuál fue el que inició este proceso.
+            El profe recomienda usar parameterized jobs en vez de watchers, porque cuando uso watchers solo tengo tres opciones mientras que con parameterized jobs tengo más opciones.
+***Clase#10**
+    ***Connectándonos a GitHub***
+        Es posible conectar un repositorio de GitHub a Jenkins para que cada vez que exista un push se haga un build del source code. Para que esto sea posible debemos realizar cambios tanto en Jenkins como en GitHub.
+        ***En Jenkins:***
+            1- Debemos tener el GitHub plugin instalado
+            2- Al crear el Job, debemos marcar el SCM la opción de Git, y pegar la URL del repo. (Para esta acción el host de Jenkins debe tener instalado Git)
+            3- En el apartado "branches to build" si dejamos en blanco tomara en cuenta cualquier branch. 
+            4- En "Build Triggers" debemos marcar la opción "GitHub hook trigger for GITScm polling"
+        ***En GitHub:***
+            1- Vamos al repo de GitHub.
+            2- Entramos en Settings -> Webhooks.
+            3- Añadimos un nuevo Webhook.
+            4- Añadimos la Payload URL. (Si la URL no acaba en /github-webhook/ GItHub lanzara un error.)
+            5- Marcar "Just the push event"
+    ***Fuenetes:**
+        
