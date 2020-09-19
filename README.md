@@ -70,12 +70,11 @@
 ***Clase#7***
     ***¿Cómo Jenkins interactúa con su máquina local?***
         Instalar los programas que vamos a usuar en el jenkins.
-            sudo apt install nodejs;
-        Se debe tratar de mantener todo portable.
-
-
-            
-
-
-
-
+            Por ejemplo el binario de nodejs;
+                sudo apt install nodejs;
+        Nota: No es recomentable ya que se debe tratar de mantener todo portable.
+***Clase#8***
+    ***Jenkins y su ecosistema de Plugins***
+        [Manage Plugins]: Extienden a jenkins y permite mantener portabilidad.
+        [Download now and install after restart]: Se recomienda esta opción ya que jenkins termina de ejecutar los jobs pendientes y posteriormente jenkins realiza la instalación.
+        
