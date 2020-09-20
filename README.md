@@ -123,3 +123,9 @@
 ***Clase#11**
     ***¿Qué es un \'Pipeline\'?***
         Pipelines nos permiten configurar nuestros Jobs con código en lugar de hacerlo en la interfaz visual. En Jenkins los hay de dos maneras: Scripting y Declarative.
+***Clase#12**
+    ***¿Cómo puedo acelerar mi development de Pipelines?***
+        stage('Alert') {
+        steps{
+            slackSend channel: 'ci-cd', message: 'Pipeline'
+        }
