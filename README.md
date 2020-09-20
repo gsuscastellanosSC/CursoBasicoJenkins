@@ -129,3 +129,7 @@
         steps{
             slackSend channel: 'ci-cd', message: 'Pipeline'
         }
+***Clase#13***
+    ***Introducción a Slaves***
+        Permite escalamiento horizontal.
+        
