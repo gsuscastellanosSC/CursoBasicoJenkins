@@ -120,4 +120,6 @@
             4- Añadimos la Payload URL. (Si la URL no acaba en /github-webhook/ GItHub lanzara un error.)
             5- Marcar "Just the push event"
     ***Fuenetes:**
-        
+***Clase#11**
+    ***¿Qué es un \'Pipeline\'?***
+        Pipelines nos permiten configurar nuestros Jobs con código en lugar de hacerlo en la interfaz visual. En Jenkins los hay de dos maneras: Scripting y Declarative.
