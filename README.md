@@ -141,3 +141,6 @@
         chwon -R jenkins:jenkins var/jenkins
         # sudo su jenkins
         # vim /home/jenkins/.ssh/authorized_keys     
+***Clase#15**
+    ***Cierre del curso, introducción a DevOps***
+        https://platzi.com/clases/devops/
