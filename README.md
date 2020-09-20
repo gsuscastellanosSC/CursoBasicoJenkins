@@ -132,4 +132,12 @@
 ***Clase#13***
     ***Introducción a Slaves***
         Permite escalamiento horizontal.
-        
+***Clase#14***
+    ***Conectado un Slave***
+        adduser jenkins
+        apt-get update
+        apt-get install openjdk-8-jdk wget gnupg git vim
+        mkdir var/jenkins
+        chwon -R jenkins:jenkins var/jenkins
+        # sudo su jenkins
+        # vim /home/jenkins/.ssh/authorized_keys     
