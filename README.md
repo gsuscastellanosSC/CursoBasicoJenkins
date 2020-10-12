@@ -13,6 +13,7 @@
         Documentación de Jenkins: https://www.jenkins.io/doc/
         ***Instalación***
             <!-- https://pkg.jenkins.io/debian-stable/ -->
+            Se debe de crear un usuario para jenkins;
             sudo apt update && sudo apt upgrade -y;
             sudo apt-get install openjdk-8-jdk wget gnupg -y;
             wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -;
@@ -117,7 +118,7 @@
             1- Vamos al repo de GitHub.
             2- Entramos en Settings -> Webhooks.
             3- Añadimos un nuevo Webhook.
-            4- Añadimos la Payload URL. (Si la URL no acaba en /github-webhook/ GItHub lanzara un error.)
+            4- Añadimos la Payload URL. (Si la URL no acaba en /github-webhook/ GItHub lanzara un error.) ejm http://161.35.3.84:8080/github-webhook/
             5- Marcar "Just the push event"
     ***Fuenetes:**
 ***Clase#11**
@@ -144,3 +145,6 @@
 ***Clase#15**
     ***Cierre del curso, introducción a DevOps***
         https://platzi.com/clases/devops/
+
+
+project = ISOP AND status in (Listo, Cerrado, Resuelto) AND resolved >= 2020-09-01 AND resolved <= 2020-09-30 AND assignee in ("azlain.saavedra@solem.cl")
