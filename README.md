@@ -146,5 +146,9 @@
     ***Cierre del curso, introducción a DevOps***
         https://platzi.com/clases/devops/
 
-
-project = ISOP AND status in (Listo, Cerrado, Resuelto) AND resolved >= 2020-09-01 AND resolved <= 2020-09-30 AND assignee in ("azlain.saavedra@solem.cl")
+**Bakups**
+    la primera que si es contenedor o cuando lo montes en contenedor, dejes con volumen el jenkins home /var/jenkins_home con eso siempre que la vuelvas a montar no pierdas la data
+  
+    dos el /var/lib/jenkins/ en cada workspace de cada job, viene con un archivo conf.xml, seria hacerle copia, pero puede molestar entre versiones
+  
+    y tres que instales un plugin de backups, realices la copia completa, y luego cuando instales el ambiente, reinstales ese plugin y recargues el backup
