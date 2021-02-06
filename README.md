@@ -1,17 +1,17 @@
 # CursoBasicoJenkins
     https://platzi.com/clases/jenkins-basico/
-***Class#1**
-    ***Introducción a Automatización***
-***Class#2**
-    ***Introducción a Jenkins***
+# Class#1
+    Introducción a Automatización
+# Class#2
+    Introducción a Jenkins
         Jenkins es Open Source
         Jenkinks corre en Java
         Jenkinks se puede hacer escalable verticalmente (Recursos de hardware)
         Jenkinks se puede hacer escalable horizontalmente(Varios Nodos Cluster++)
-***Class#3**
-    ***Instalación y Configuración Básica de Jenkins***
+# Class#3
+    Instalación y Configuración Básica de Jenkins
         Documentación de Jenkins: https://www.jenkins.io/doc/
-        ***Instalación***
+        Instalación
             <!-- https://pkg.jenkins.io/debian-stable/ -->
             Se debe de crear un usuario para jenkins;
             sudo apt update && sudo apt upgrade -y;
@@ -22,14 +22,14 @@
             sudo apt update && sudo apt upgrade -y;
             sudo apt-get install jenkins -y;
             service jenkins status;
-***Class#4***
-    ***Manejo Básico de Usuarios***
+# Class#4
+    Manejo Básico de Usuarios
         Manage Jenkins: Permite acceso a la configuración de los usuarios.
-***Class#5***
-    ***¿Qué es un Job?***
+# Class#5
+    ¿Qué es un Job?
         Build Executor Status: Permite el acceso para configurar jobs.
-***Clase#6***
-    ***Configuración de un Job***
+# Clase#6
+    Configuración de un Job
         Jenkins > FirstJob > General: 
             [Description]: Descripción del Job.
             [Discard old builds]: Log Rotation.
@@ -61,25 +61,25 @@
                 [Poll SCM]: N/E
             
             [Build Environment]:
-                [Delete workspace before build starts]: limpiar el folder del script. **IMPORTANTE**
+                [Delete workspace before build starts]: limpiar el folder del script. IMPORTANTE
                 [Use secret text(s) or file(s)]: Cosas secretas, variables de entorno o elmentos private.
                 [Abort the build if it's stuck]: Controlar que un job falle y no quede en ejecución perpetua.
                 [Add timestamps to the Console Output]: Agregar marcas de tiempo a la salida de la consola.
                 [Inspect build log for published Gradle build scans]: N/E
                 [With Ant]: N/E
             [Build]: Ejecución de shell.
-***Clase#7***
-    ***¿Cómo Jenkins interactúa con su máquina local?***
+# Clase#7
+    ¿Cómo Jenkins interactúa con su máquina local?
         Instalar los programas que vamos a usuar en el jenkins.
             Por ejemplo el binario de nodejs;
                 sudo apt install nodejs;
         Nota: No es recomentable ya que se debe tratar de mantener todo portable.
-***Clase#8***
-    ***Jenkins y su ecosistema de Plugins***
+# Clase#8
+    Jenkins y su ecosistema de Plugins
         [Manage Plugins]: Extienden a jenkins y permite mantener portabilidad.
         [Download now and install after restart]: Se recomienda esta opción ya que jenkins termina de ejecutar los jobs pendientes y posteriormente jenkins realiza la instalación.
-***Clase#9***
-    ***Cadenas de Jobs***
+# Clase#9
+    Cadenas de Jobs
         Install Plugin Parameterized Trigger plugin.
 
         Primero instalamos el plugin Parameterized Trigger, igual cómo instalamos anteriormente y reiniciamos.
@@ -106,35 +106,35 @@
             Corre los test para esta versión, cuando acabes, mandame esta versión a producción le pasó el id del commit, y se lo pasó a mí job que hace deployment y cuando lo resuelvas me lo despliegas.
             El sabe la cadena de ejecuciones que tuvo, y cuál fue el que inició este proceso.
             El profe recomienda usar parameterized jobs en vez de watchers, porque cuando uso watchers solo tengo tres opciones mientras que con parameterized jobs tengo más opciones.
-***Clase#10**
-    ***Connectándonos a GitHub***
+# Clase#10
+    Connectándonos a GitHub
         Es posible conectar un repositorio de GitHub a Jenkins para que cada vez que exista un push se haga un build del source code. Para que esto sea posible debemos realizar cambios tanto en Jenkins como en GitHub.
-        ***En Jenkins:***
+        En Jenkins:
             1- Debemos tener el GitHub plugin instalado
             2- Al crear el Job, debemos marcar el SCM la opción de Git, y pegar la URL del repo. (Para esta acción el host de Jenkins debe tener instalado Git)
             3- En el apartado "branches to build" si dejamos en blanco tomara en cuenta cualquier branch. 
             4- En "Build Triggers" debemos marcar la opción "GitHub hook trigger for GITScm polling"
-        ***En GitHub:***
+        En GitHub:
             1- Vamos al repo de GitHub.
             2- Entramos en Settings -> Webhooks.
             3- Añadimos un nuevo Webhook.
             4- Añadimos la Payload URL. (Si la URL no acaba en /github-webhook/ GItHub lanzara un error.) ejm http://161.35.3.84:8080/github-webhook/
             5- Marcar "Just the push event"
-    ***Fuenetes:**
-***Clase#11**
-    ***¿Qué es un \'Pipeline\'?***
+    Fuenetes:
+# Clase#11
+    ¿Qué es un \'Pipeline\'?
         Pipelines nos permiten configurar nuestros Jobs con código en lugar de hacerlo en la interfaz visual. En Jenkins los hay de dos maneras: Scripting y Declarative.
-***Clase#12**
-    ***¿Cómo puedo acelerar mi development de Pipelines?***
+# Clase#12
+    ¿Cómo puedo acelerar mi development de Pipelines?
         stage('Alert') {
         steps{
             slackSend channel: 'ci-cd', message: 'Pipeline'
         }
-***Clase#13***
-    ***Introducción a Slaves***
+# Clase#13
+    Introducción a Slaves
         Permite escalamiento horizontal.
-***Clase#14***
-    ***Conectado un Slave***
+# Clase#14
+    Conectado un Slave
         adduser jenkins
         apt-get update
         apt-get install openjdk-8-jdk wget gnupg git vim
@@ -142,11 +142,11 @@
         chwon -R jenkins:jenkins var/jenkins
         # sudo su jenkins
         # vim /home/jenkins/.ssh/authorized_keys     
-***Clase#15**
-    ***Cierre del curso, introducción a DevOps***
+# Clase#15
+    Cierre del curso, introducción a DevOps
         https://platzi.com/clases/devops/
 
-**Bakups**
+# Bakups
     la primera que si es contenedor o cuando lo montes en contenedor, dejes con volumen el jenkins home /var/jenkins_home con eso siempre que la vuelvas a montar no pierdas la data
   
     dos el /var/lib/jenkins/ en cada workspace de cada job, viene con un archivo conf.xml, seria hacerle copia, pero puede molestar entre versiones
