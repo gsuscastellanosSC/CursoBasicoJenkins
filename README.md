@@ -145,7 +145,14 @@
 # Clase#15
     Cierre del curso, introducción a DevOps
         https://platzi.com/clases/devops/
-
+# Scrips
+    Delete builds:
+        item = Jenkins.instance.getItemByFullName("DeployBaseDatos")
+        //THIS WILL REMOVE ALL BUILD HISTORY
+        item.builds.each() { build ->
+        build.delete()
+        }
+        item.updateNextBuildNumber(1)
 # Bakups
     la primera que si es contenedor o cuando lo montes en contenedor, dejes con volumen el jenkins home /var/jenkins_home con eso siempre que la vuelvas a montar no pierdas la data
   
